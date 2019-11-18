@@ -1,30 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My University</title>
-	<style type="text/css">
-		body{background-image:url( "img/7.JPG"); }
-		header{font-size: 20px}
-	</style>
+<meta charest = "utf-8" />
+<title>登录界面</title>
+<style>
+#display{
+    width: 300px;
+    height:200px;
+    background: #f2f2f2;
+    display: none;
+}
+
+</style>
+<script>
+ 
+function user(){
+  var mingzi=document.getElementById('mingzi').value
+  var mima = document.getElementById('mima').value
+    if(mingzi=='aaaaaa'&&mima=='123456'){
+        //display.style.display="block";
+      alert("欢迎进入！！！");
+      window.location.href="index1.html";
+    }else{
+        alert("请输入正确的用户名或密码！！");
+    }
+}
+// function nihao(){
+// display.style.display="block";}
+
+</script>
+</head>
 <body>
-        <!-- <h1 align = "center">欢迎您的到来</h1> -->
-      <p><img src="img/标题1.png" width="490px"><img src="img/标题.png" width="490px"><img src="img/标题3.png" width="490px"></im></p>
-   <header>
-        <a href="index.html">首页</a>&nbsp;
-        <a href="daolun/index.html">计算机导论</a>&nbsp;
-        <a href="html/index.html" >网站设计</a>&nbsp;
-        <a href="java/index.html">Java程序设计</a>&nbsp;
-        <a href="javascript/index.html">Javscript</a>&nbsp;
-        <a href="kebaio/index.html">我的课表</a>&nbsp;
-        <a href="xuexitiantang/index.html">学习天堂</a>&nbsp;
-        <a href="ftp/index.html">FTP合集</a>
 
-    </header>
+<h1 align="center">用户验证</h1>
+<hr color="#336699"/>
+<form name="biao">
+<!--
+	<table bgcolor="#f2f2f2">
+	<tr>
+		<td>niaho</td>	
+	</tr>
+	
+	</table>
+	
+table 表格
+<tr>行
+<td>单元格
 
-    <p>html&nbsp;</p>
-   
+
+-->
+<table width="600px" bgcolor="#f2f2f2" align="center">
+  
+    <tr>
+      <td>&nbsp;姓名：</td>
+      <td>&nbsp;<input type="text" id="mingzi" name="username" Maxlength="6" placeholder="请输入您的用户名"/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;密码：</td>
+      <td>&nbsp;<input type="password" id="mima" name="password" Maxlength="6" placeholder="请输入您的密码"/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<input type="button"  value="提交" onclick="user()"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+
+</table>
+</form>
 </body>
+	
+	<!-- <input type="Submit" onclick="nihao()"/> -->
+<!-- <div id="display">
+<a href="index.html">验证成功！！点击进入。。</a> -->
+
+</div>
 </html>
