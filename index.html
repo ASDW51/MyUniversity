@@ -9,8 +9,52 @@
     background: #f2f2f2;
     display: none;
 }
+#div1{
+  background: black;
+  color: white;
+  font-size: 50px;
+  float: left;
 
+}
+#div2{
+width: 150px;
+
+
+position: relative;
+left:45%;
+top: 0px;
+}
 </style>
+<script>
+    window.onload = function(){
+        function panduan(n){
+            if(n<10){
+                return '0'+n;
+            }else{
+                return ''+n;
+            }
+        }
+      function time(){
+        var Osrc = document.getElementsByTagName('img');
+        var obj = new Date();
+        var time1 = obj.getHours();
+        var time2 = obj.getMinutes();
+        var time3 = obj.getSeconds();
+        
+        var str = panduan(time1)+panduan(time2)+panduan(time3);
+        for(var i = 0;i<Osrc.length;i++){
+            Osrc[i].src= 'img/'+str.charAt(i)+'.png';   
+           
+        }
+
+    }
+
+    //利用定时器自动刷新
+    //这里函数调用不用小括号
+    setInterval(time,1000);
+    time();
+}
+    </script>
 <script>
  
 function user(){
@@ -30,8 +74,17 @@ function user(){
 </script>
 </head>
 <body>
-
-<h1 align="center">用户验证</h1>
+    <div id="div1">
+        <img src="img/0.png">
+        <img src="img/0.png">
+        :
+        <img src="img/0.png">
+        <img src="img/0.png">
+        :
+        <img src="img/0.png">
+        <img src="img/0.png">
+     </div>
+<div id="div2"><h1 align="center">用户验证</h1></div>
 <hr color="#336699"/>
 <form name="biao">
 <!--
